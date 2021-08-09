@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Credit Card Component</title>
+</head>
+<body>
+
+<header>
+    <h1>Paiement par carte de crédit</h1>
+    <h2>Frais de transaction "64.98€"</h2>
+</header>
+
+<div id="frame">
+
+    <div id="flip-card">
+
+        <div class="flip-card-inner" style="transform: rotateY(0deg);">
+
+            <div id="flip-card-front">
+                <div id="card-top">
+                    <div id="card-shiny">
+                        <div id="card-shinier"></div>
+                    </div>
+                    <div id="card-logo">
+                        <div id="card-logo-mastercard"></div>
+                        <div id="card-logo-visa"></div>
+                    </div>
+                </div>
+
+                <div id="card-lower"></div>
+                    <div id="card-number">•••• •••• •••• ••••</div>
+                    <div id="card-name">FULL NAME</div>
+                    <div id="card-validity">
+                        <div id="card-validity-format">MONTH/YEAR</div>
+                        <div id="card-validity-date">MM/YY</div>
+                        <div id="card-validity-thru">valid<br>thru</div>
+                    </div>
+                    
+            </div>
+
+            <div id="flip-card-back">
+                <div id="card-top">
+                    <div id="card-blackline"></div>
+                    <div id="card-whiteline"></div>
+                </div>
+
+                <div id="card-lower"></div>
+                    <div id="cvc">•••</div>
+                    <div id="card-shiny-mini">
+                        <div id="card-shinier-mini"></div>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <div id="form">
+        <form>
+            <label>Numéro de la carte</label>
+            <input type="text" maxlength="19" id="form-card-number" placeholder="•••• •••• •••• ••••" onkeypress="onChangeTxtCardNumber(e)">
+            <label>Titulaire de la carte</label>
+            <input type="text" maxlength="25" id="form-card-text" placeholder="FULL NAME">
+                    <div id="form-side">
+
+                        <div id="form-side-1">
+                            <label>Date d'expiration</label>
+                            <input type="text" onkeypress="return validateNumberAndForwardSlash(event);" pattern="(0[1-9]|10|11|12)/[0-9]{2}" maxlength="5" id="form-card-exp" placeholder="••/••">
+                        </div>
+
+                        <div id="form-side-2">
+                            <label>Cryptogramme</label>
+                            <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3" id="form-card-ccv" placeholder="•••">
+                        </div>
+
+                    </div>
+            <button id="btn-pay"> Payer 64.98€</button>
+
+        </form>
+    </div>
+
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
