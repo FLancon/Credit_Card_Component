@@ -18,7 +18,7 @@ formCardNumber.addEventListener('input', function(){
 
   });
 
-  formCardName.addEventListener('input', function(){
+formCardName.addEventListener('input', function(){
 
     var str = formCardName.value;
     var newStr = str.slice(0,3) + ' / ' + str.slice(3);
@@ -29,13 +29,13 @@ formCardNumber.addEventListener('input', function(){
         cardName.innerHTML = "FULL NAME";
     }
 
-  });
+});
 
   formCardExp.addEventListener('input', function(){
     cardValidityDate.innerHTML = formCardExp.value;
 
     if (formCardExp.value == "") {
-      cardValidityDate.innerHTML = "•••";
+      cardValidityDate.innerHTML = "MM/YY";
     } 
     
     //Si on a entré le mois dans la date d'expiration
@@ -67,7 +67,7 @@ formCardNumber.addEventListener('input', function(){
   var txtCardNumber = document.querySelector("#form-card-number");
   txtCardNumber.addEventListener("input", onChangeTxtCardNumber);
   
-  function onChangeTxtCardNumber(e) {		
+  function onChangeTxtCardNumber() {		
       var cardNumber = txtCardNumber.value;
    
       // Do not allow users to write invalid characters

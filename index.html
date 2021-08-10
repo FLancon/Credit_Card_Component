@@ -14,36 +14,33 @@
     <h2>Frais de transaction "64.98€"</h2>
 </header>
 
-<div id="frame">
+<div class="frame">
 
-    <div id="flip-card">
+    <div class="flip-card">
 
         <div class="flip-card-inner" style="transform: rotateY(0deg);">
 
-            <div id="flip-card-front">
-                <div id="card-top">
-                    <div id="card-shiny">
-                        <div id="card-shinier"></div>
-                    </div>
-                    <div id="card-logo">
-                        <div id="card-logo-mastercard"></div>
-                        <div id="card-logo-visa"></div>
-                    </div>
-                </div>
+            <div class="flip-card-front">
+                
+                <!--  Small chip logo - But flips on both side
+
+                    <div class="card-shiny">
+                    <div id="card-shinier"></div>
+                </div> -->
 
                 <div id="card-lower"></div>
-                    <div id="card-number">•••• •••• •••• ••••</div>
-                    <div id="card-name">FULL NAME</div>
-                    <div id="card-validity">
-                        <div id="card-validity-format">MONTH/YEAR</div>
-                        <div id="card-validity-date">MM/YY</div>
-                        <div id="card-validity-thru">valid<br>thru</div>
-                    </div>
-                    
+                        <div id="card-number">•••• •••• •••• ••••</div>
+                        <div id="card-name">FULL NAME</div>
+                        <div id="card-validity">
+                            <div id="card-validity-format">MONTH/YEAR</div>
+                            <div id="card-validity-date">MM/YY</div>
+                            <div id="card-validity-thru">valid<br>thru</div>
+                        </div>
+                        
             </div>
 
-            <div id="flip-card-back">
-                <div id="card-top">
+            <div class="flip-card-back">
+                <div id="card-back-top">
                     <div id="card-blackline"></div>
                     <div id="card-whiteline"></div>
                 </div>
@@ -60,7 +57,7 @@
     <div id="form">
         <form>
             <label>Numéro de la carte</label>
-            <input type="text" maxlength="19" id="form-card-number" placeholder="•••• •••• •••• ••••" onkeypress="onChangeTxtCardNumber(e)">
+            <input type="text" maxlength="19" id="form-card-number" placeholder="•••• •••• •••• ••••" onkeypress="onChangeTxtCardNumber()">
             <label>Titulaire de la carte</label>
             <input type="text" maxlength="25" id="form-card-text" placeholder="FULL NAME">
                     <div id="form-side">
@@ -82,6 +79,7 @@
     </div>
 
 </div>
+
 <script src="script.js"></script>
 
 </body>
